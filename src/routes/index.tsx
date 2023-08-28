@@ -3,18 +3,9 @@
 import * as React from 'react';
 import {View, Text, SafeAreaView, Pressable} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
+import EventsScreen from '../screens/EventsScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-function HomeScreen({navigation}) {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
-      <Pressable onPress={() => navigation.navigate('Profile')}>
-        <Text>Go Profile</Text>
-      </Pressable>
-    </View>
-  );
-}
 function ProfileScreen() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -28,7 +19,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Events" component={EventsScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
