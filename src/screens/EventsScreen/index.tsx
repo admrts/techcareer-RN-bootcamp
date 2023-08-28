@@ -1,4 +1,4 @@
-import {View, Text, FlatList} from 'react-native';
+import {View, Text, FlatList, SafeAreaView} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {getAllEvents} from '../../api/events';
 import {EventsData} from '../../api/events';
@@ -19,15 +19,16 @@ const EventsScreen = () => {
   }, []);
 
   return (
-    <View>
+    <SafeAreaView>
       {eventsData && (
         <FlatList
+          style={{marginHorizontal: 5}}
           data={eventsData}
           keyExtractor={item => item.id}
           renderItem={({item}) => <EventCard item={item} />}
         />
       )}
-    </View>
+    </SafeAreaView>
   );
 };
 
