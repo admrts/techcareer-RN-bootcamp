@@ -1,11 +1,11 @@
 import {View, Text, FlatList, SafeAreaView} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {getAllEvents} from '../../api/events';
-import {EventsData} from '../../api/events';
+import {EventsDataProps} from '../../api/events';
 import EventCard from '../../components/EventCard';
 
 const EventsScreen = () => {
-  const [eventsData, setEventsData] = useState<EventsData[] | any>();
+  const [eventsData, setEventsData] = useState<EventsDataProps[] | any>();
   useEffect(() => {
     const fetchData = async () => {
       try {

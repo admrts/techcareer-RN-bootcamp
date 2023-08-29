@@ -1,6 +1,6 @@
 import {axios} from '../lib/axios';
 
-export interface EventsData {
+export interface EventsDataProps {
   id: number;
   category: string;
   name: string;
@@ -13,7 +13,7 @@ export interface EventsData {
   price: string;
 }
 
-export async function getAllEvents(): Promise<EventsData[] | boolean> {
+export async function getAllEvents(): Promise<EventsDataProps[] | boolean> {
   try {
     const data = await axios.get('/events');
     return data.data;
