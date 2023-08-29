@@ -2,6 +2,7 @@ import {View, Text, Image, Pressable, ActivityIndicator} from 'react-native';
 import React, {useState} from 'react';
 import {EventsData} from '../../api/events';
 import styles from './EventCard.style';
+import dayjs = require('dayjs');
 
 interface EventCardProps {
   item: EventsData;
@@ -17,12 +18,34 @@ const EventCard = ({item}: EventCardProps) => {
         onLoadStart={() => setLoading(true)}
         onLoadEnd={() => setLoading(false)}
       />
+
       <ActivityIndicator animating={loading} style={styles.loading} />
 
-      <Text>{item.name}</Text>
-      <Text>{item.city}</Text>
-      <Text>{item.location}</Text>
-      <Text>{item.price}</Text>
+      <View style={styles.description}>
+        <View style={styles.textContainer}>
+          <Text style={styles.titles}>Etkinlik Adı:</Text>
+          <Text style={styles.variables}>{item.name}</Text>
+        </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.titles}>Şehir: </Text>
+          <Text style={styles.variables}>{item.city}</Text>
+        </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.titles}>Konum: </Text>
+          <Text style={styles.variables}>{item.location}</Text>
+        </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.titles}>Tarih: </Text>
+          <Text style={styles.variables}>{item.date}</Text>
+        </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.titles}>Saat: </Text>
+          <Text style={styles.variables}>{item.time}</Text>
+        </View>
+        <View style={styles.priceContainer}>
+          <Text style={styles.price}>{item.price}₺</Text>
+        </View>
+      </View>
     </Pressable>
   );
 };

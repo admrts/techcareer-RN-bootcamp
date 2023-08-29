@@ -7,6 +7,7 @@ export interface EventsData {
   city: string;
   location: string;
   imageUrl: string;
+  date: string;
   time: string;
   rules: string;
   price: string;
