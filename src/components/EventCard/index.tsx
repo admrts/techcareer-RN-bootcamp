@@ -2,7 +2,9 @@ import {View, Text, Image, Pressable, ActivityIndicator} from 'react-native';
 import React, {useState} from 'react';
 import {EventsData} from '../../api/events';
 import styles from './EventCard.style';
-import dayjs = require('dayjs');
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {useNavigation} from '@react-navigation/native';
+import {EventsStackParams} from '../../routes/EventsStack/EventsStack';
 
 interface EventCardProps {
   item: EventsData;
@@ -10,8 +12,12 @@ interface EventCardProps {
 
 const EventCard = ({item}: EventCardProps) => {
   const [loading, setLoading] = useState(false);
+  const navigation =
+    useNavigation<NativeStackNavigationProp<EventsStackParams>>();
   return (
-    <Pressable style={styles.container} onPress={() => console.log(item.id)}>
+    <Pressable
+      style={styles.container}
+      onPress={() => navigation.navigate('Detail', {id: item.id})}>
       <Image
         source={{uri: item.imageUrl}}
         style={styles.image}
