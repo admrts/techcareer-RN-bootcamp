@@ -1,32 +1,45 @@
-import {View, Text, FlatList, SafeAreaView} from 'react-native';
-import React, {useEffect, useState} from 'react';
-import {getAllEvents} from '../../api/events';
-import {EventsDataProps} from '../../api/events';
+import {
+  View,
+  Text,
+  FlatList,
+  SafeAreaView,
+  ActivityIndicator,
+} from 'react-native';
+import React, {useEffect} from 'react';
 import EventCard from '../../components/EventCard';
+import {store} from '../../redux/store';
+import {getEvents} from '../../redux/eventsSlice';
+import {useAppSelector} from '../../redux/hook';
+import styles from './index.style';
 
 const EventsScreen = () => {
-  const [eventsData, setEventsData] = useState<EventsDataProps[] | any>();
+  const {error, events, isLoading} = useAppSelector(state => state.events);
+
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const events = await getAllEvents();
-        setEventsData(events);
-      } catch (error) {
-        console.log(error);
-      }
+      await store.dispatch(getEvents());
     };
     fetchData();
   }, []);
 
   return (
     <SafeAreaView>
-      {eventsData && (
+      {isLoading ? (
+        <View style={styles.view}>
+          <ActivityIndicator />
+        </View>
+      ) : (
         <FlatList
-          style={{marginHorizontal: 5}}
-          data={eventsData}
+          style={styles.flatList}
+          data={events}
           keyExtractor={item => item.id}
           renderItem={({item}) => <EventCard item={item} />}
         />
+      )}
+      {error && (
+        <View style={styles.view}>
+          <Text> Hata : {error}</Text>
+        </View>
       )}
     </SafeAreaView>
   );

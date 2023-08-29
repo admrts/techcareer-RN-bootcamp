@@ -6,7 +6,7 @@ import EventDetailScreen from '../../screens/EventDetailScreen';
 export type EventsStackParams = {
   Events: undefined;
   Detail: {
-    id: number;
+    id: string;
   };
 };
 

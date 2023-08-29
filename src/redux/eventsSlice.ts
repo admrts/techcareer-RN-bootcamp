@@ -1,33 +1,47 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit';
 import type {RootState} from './store';
 import {EventsDataProps} from '../api/events';
+import {getAllEvents} from '../api/events';
 
+export const getEvents = createAsyncThunk('getAllEvents', async () => {
+  const data = await getAllEvents();
+  return data;
+});
 // Define a type for the slice state
-interface EventsState {
-  events: EventsDataProps[];
-  counter: number;
+interface EventsStateProps {
+  events: Array<EventsDataProps>;
+  isLoading: boolean | undefined;
+  error: string | undefined;
 }
 
 // Define the initial state using that type
-const initialState: EventsState = {
+const initialState: EventsStateProps = {
   events: [],
-  counter: 0,
+  isLoading: false,
+  error: undefined,
 };
 
 export const eventsSlice = createSlice({
   name: 'events',
   initialState,
-  reducers: {
-    increment: state => {
-      state.counter += 1;
-    },
+  reducers: {},
+  extraReducers(builder) {
+    builder.addCase(getEvents.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(getEvents.fulfilled, (state, action) => {
+      state.events = action.payload;
+      state.isLoading = false;
+      state.error = undefined;
+    });
+    builder.addCase(getEvents.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.error.message;
+    });
   },
 });
 
-export const {increment} = eventsSlice.actions;
-
-// Other code such as selectors can use the imported `RootState` type
-// export const selectCount = (state: RootState) => state.counter.value;
+export const {} = eventsSlice.actions;
 
 export default eventsSlice.reducer;

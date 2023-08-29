@@ -1,13 +1,13 @@
 import {View, Text, Image, Pressable, ActivityIndicator} from 'react-native';
 import React, {useState} from 'react';
-import {EventsData} from '../../api/events';
+import {EventsDataProps} from '../../api/events';
 import styles from './EventCard.style';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {useNavigation} from '@react-navigation/native';
 import {EventsStackParams} from '../../routes/EventsStack/EventsStack';
 
 interface EventCardProps {
-  item: EventsData;
+  item: EventsDataProps;
 }
 
 const EventCard = ({item}: EventCardProps) => {
