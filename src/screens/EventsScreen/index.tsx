@@ -11,6 +11,7 @@ import {store} from '../../redux/store';
 import {getEvents} from '../../redux/eventsSlice';
 import {useAppSelector} from '../../redux/hook';
 import styles from './index.style';
+import SearchBar from '../../components/SearchBar';
 
 const EventsScreen = () => {
   const {error, events, isLoading} = useAppSelector(state => state.events);
@@ -29,12 +30,14 @@ const EventsScreen = () => {
           <ActivityIndicator />
         </View>
       ) : (
-        <FlatList
-          style={styles.flatList}
-          data={events}
-          keyExtractor={item => item.id}
-          renderItem={({item}) => <EventCard item={item} />}
-        />
+        <View style={styles.flatList}>
+          <SearchBar />
+          <FlatList
+            data={events}
+            keyExtractor={item => item.id}
+            renderItem={({item}) => <EventCard item={item} />}
+          />
+        </View>
       )}
       {error && (
         <View style={styles.view}>
