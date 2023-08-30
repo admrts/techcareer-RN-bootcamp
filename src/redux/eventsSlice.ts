@@ -10,14 +10,16 @@ export const getEvents = createAsyncThunk('getAllEvents', async () => {
 });
 // Define a type for the slice state
 interface EventsStateProps {
-  events: Array<EventsDataProps>;
+  initialEvents: Array<EventsDataProps>;
+  lastEvents: Array<EventsDataProps>;
   isLoading: boolean | undefined;
   error: string | undefined;
 }
 
 // Define the initial state using that type
 const initialState: EventsStateProps = {
-  events: [],
+  initialEvents: [],
+  lastEvents: [],
   isLoading: false,
   error: undefined,
 };
@@ -25,13 +27,29 @@ const initialState: EventsStateProps = {
 export const eventsSlice = createSlice({
   name: 'events',
   initialState,
-  reducers: {},
+  reducers: {
+    searchValue: (state, action: PayloadAction<string>) => {
+      if (action.payload == '') {
+        state.lastEvents = state.initialEvents;
+      }
+      state.lastEvents = state.initialEvents.filter(item => {
+        return (
+          item.name.toLowerCase().includes(action.payload.toLowerCase()) ||
+          item.category.toLowerCase().includes(action.payload.toLowerCase()) ||
+          item.city.toLowerCase().includes(action.payload.toLowerCase()) ||
+          item.date.toLowerCase().includes(action.payload.toLowerCase()) ||
+          item.time.toLowerCase().includes(action.payload.toLowerCase())
+        );
+      });
+    },
+  },
   extraReducers(builder) {
     builder.addCase(getEvents.pending, state => {
       state.isLoading = true;
     });
     builder.addCase(getEvents.fulfilled, (state, action) => {
-      state.events = action.payload;
+      state.initialEvents = action.payload;
+      state.lastEvents = action.payload;
       state.isLoading = false;
       state.error = undefined;
     });
@@ -42,6 +60,6 @@ export const eventsSlice = createSlice({
   },
 });
 
-export const {} = eventsSlice.actions;
+export const {searchValue} = eventsSlice.actions;
 
 export default eventsSlice.reducer;

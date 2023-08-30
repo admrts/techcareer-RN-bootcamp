@@ -14,7 +14,7 @@ import styles from './index.style';
 import SearchBar from '../../components/SearchBar';
 
 const EventsScreen = () => {
-  const {error, events, isLoading} = useAppSelector(state => state.events);
+  const {error, lastEvents, isLoading} = useAppSelector(state => state.events);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,7 +33,7 @@ const EventsScreen = () => {
         <View style={styles.flatList}>
           <SearchBar />
           <FlatList
-            data={events}
+            data={lastEvents}
             keyExtractor={item => item.id}
             renderItem={({item}) => <EventCard item={item} />}
           />
