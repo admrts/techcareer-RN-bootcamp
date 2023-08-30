@@ -13,7 +13,16 @@ export interface EventsDataProps {
   price: string;
 }
 
+// get all events
 export async function getAllEvents(): Promise<EventsDataProps[]> {
   const {data} = await axios.get('/events');
+  return data;
+}
+
+// get event by id
+export async function getEventById(
+  id: string | number,
+): Promise<EventsDataProps> {
+  const {data} = await axios.get(`/events/${id}`);
   return data;
 }
