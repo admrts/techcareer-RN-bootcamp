@@ -33,12 +33,12 @@ const EventCard = ({item}: EventCardProps) => {
           <Text style={styles.variables}>{item.name}</Text>
         </View>
         <View style={styles.textContainer}>
-          <Text style={styles.titles}>Şehir: </Text>
-          <Text style={styles.variables}>{item.city}</Text>
+          <Text style={styles.titles}>Kategori: </Text>
+          <Text style={styles.variables}>{item.category}</Text>
         </View>
         <View style={styles.textContainer}>
-          <Text style={styles.titles}>Konum: </Text>
-          <Text style={styles.variables}>{item.location}</Text>
+          <Text style={styles.titles}>Şehir: </Text>
+          <Text style={styles.variables}>{item.city}</Text>
         </View>
         <View style={styles.textContainer}>
           <Text style={styles.titles}>Tarih: </Text>

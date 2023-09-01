@@ -16,8 +16,16 @@ export const EventsStack = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Events" component={EventsScreen} />
-        <Stack.Screen name="Detail" component={EventDetailScreen} />
+        <Stack.Screen
+          name="Events"
+          component={EventsScreen}
+          options={{title: 'Etkinlikler'}}
+        />
+        <Stack.Screen
+          name="Detail"
+          component={EventDetailScreen}
+          options={{title: 'Detaylar'}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

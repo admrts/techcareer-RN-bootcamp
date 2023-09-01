@@ -6,6 +6,6 @@ export default StyleSheet.create({
     borderRadius: 5,
     borderColor: '#aaa',
     padding: 5,
-    marginTop: 5,
+    marginVertical: 5,
   },
 });

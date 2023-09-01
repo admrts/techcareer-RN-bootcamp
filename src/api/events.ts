@@ -9,7 +9,7 @@ export interface EventsDataProps {
   imageUrl: string;
   date: string;
   time: string;
-  rules: string;
+  rules: Array<string>;
   price: string;
 }
 

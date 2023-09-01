@@ -51,7 +51,7 @@ export default StyleSheet.create({
     width: 80,
     textAlign: 'center',
     padding: 7,
-    backgroundColor: 'orange',
+    backgroundColor: 'rgb(255,159,10)',
     overflow: 'hidden',
     borderRadius: 5,
   },

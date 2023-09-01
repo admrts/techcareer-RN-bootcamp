@@ -5,6 +5,8 @@ import {EventsStackParams} from '../../routes/EventsStack/EventsStack';
 import {useAppSelector} from '../../redux/hook';
 import {store} from '../../redux/store';
 import {getSingleEvent} from '../../redux/eventDetailSlice';
+import styles from './index.style';
+import EventDetailCard from '../../components/EventDetailCard';
 
 type Props = NativeStackScreenProps<EventsStackParams, 'Detail'>;
 
@@ -16,15 +18,23 @@ const EventDetailScreen: React.FC<Props> = ({route}) => {
   }, []);
 
   if (error) {
-    return <Text>Error : {error}</Text>;
+    return (
+      <View style={styles.container}>
+        <Text>Error : {error}</Text>
+      </View>
+    );
   }
   if (isLoading) {
-    return <ActivityIndicator />;
+    return (
+      <View style={styles.container}>
+        <ActivityIndicator />
+      </View>
+    );
   }
   if (eventData) {
     return (
       <View>
-        <Text>{eventData.name}</Text>
+        <EventDetailCard item={eventData} />
       </View>
     );
   }
