@@ -421,7 +421,7 @@
       "price": "750"
     }
   ],
-  "categories": ["Konser", "Tiyatro", "Workshop", "Spor"],
+  "categories": ["Tümü", "Konser", "Tiyatro", "Workshop", "Spor"],
   "favorites": [
     {
       "id": 1

@@ -1,11 +1,13 @@
 import {configureStore} from '@reduxjs/toolkit';
 import eventsReducer from './eventsSlice';
 import eventReducer from './eventDetailSlice';
+import categoriesReducer from './categoriesSlice';
 
 export const store = configureStore({
   reducer: {
     events: eventsReducer,
     event: eventReducer,
+    categories: categoriesReducer,
   },
 });
 

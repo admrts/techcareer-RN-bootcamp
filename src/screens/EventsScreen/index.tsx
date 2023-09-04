@@ -12,6 +12,7 @@ import {getEvents} from '../../redux/eventsSlice';
 import {useAppSelector} from '../../redux/hook';
 import styles from './index.style';
 import SearchBar from '../../components/SearchBar';
+import CategoriesSection from '../../components/CategoriesSection';
 
 const EventsScreen = () => {
   const {error, lastEvents, isLoading} = useAppSelector(state => state.events);
@@ -32,6 +33,7 @@ const EventsScreen = () => {
       ) : (
         <View style={styles.flatList}>
           <SearchBar />
+          <CategoriesSection />
           <FlatList
             data={lastEvents}
             keyExtractor={item => item.id}
