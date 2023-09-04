@@ -59,17 +59,9 @@ const EventDetailCard = ({item}: EventCardProps) => {
             </Text>
           );
         })}
-        <View style={styles.priceWrapper}>
-          <Text style={styles.price}>Fiyat: {item.price}₺</Text>
-        </View>
-        <View style={styles.buttonsWrapper}>
-          <Pressable style={styles.favorite}>
-            <Text style={styles.buttonText}>Favoriye Ekle</Text>
-          </Pressable>
-          <Pressable style={styles.buy}>
-            <Text style={styles.buttonText}>Satın Al</Text>
-          </Pressable>
-        </View>
+        <Pressable style={styles.buyWrapper}>
+          <Text style={styles.buyText}>{item.price}₺ Satın Al</Text>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );

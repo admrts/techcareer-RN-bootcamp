@@ -36,42 +36,16 @@ export default StyleSheet.create({
     fontWeight: '500',
     marginBottom: 5,
   },
-  priceWrapper: {
-    alignItems: 'center',
-  },
-  price: {
-    backgroundColor: 'rgb(255,159,10)',
-    width: '100%',
-    textAlign: 'center',
-    padding: 10,
-    borderRadius: 7,
-    overflow: 'hidden',
-    fontSize: 20,
-    fontWeight: '500',
-  },
-  buttonsWrapper: {
+  buyWrapper: {
+    justifyContent: 'center',
     flexDirection: 'row',
-    marginTop: 5,
-    gap: 5,
-  },
-  favorite: {
-    backgroundColor: 'rgb(255,69,58)',
-    flex: 1,
-    alignItems: 'center',
-    padding: 10,
-    borderRadius: 7,
-    justifyContent: 'center',
-  },
-  buy: {
     backgroundColor: 'rgb(48,209,88)',
-    flex: 1,
-    alignItems: 'center',
     padding: 15,
-    borderRadius: 7,
-    justifyContent: 'center',
+    borderRadius: 10,
   },
-  buttonText: {
-    color: 'white',
+  buyText: {
+    color: '#fff',
+    fontSize: 20,
     fontWeight: '700',
   },
 });
