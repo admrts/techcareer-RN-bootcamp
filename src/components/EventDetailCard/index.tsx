@@ -6,10 +6,14 @@ import {
   SafeAreaView,
   FlatList,
   Pressable,
+  ActivityIndicator,
+  Alert,
 } from 'react-native';
 import styles from './EventDetailCard.style';
 import {EventsDataProps} from '../../api/events';
 import {useState} from 'react';
+import {buyTicket} from '../../api/buyTicket';
+import {useNavigation} from '@react-navigation/native';
 
 interface EventCardProps {
   item: EventsDataProps;
@@ -17,7 +21,17 @@ interface EventCardProps {
 
 const EventDetailCard = ({item}: EventCardProps) => {
   const [loading, setLoading] = useState(false);
-
+  const navigation = useNavigation();
+  const handlePress = async () => {
+    const status = await buyTicket(item.id);
+    if (status == 201) {
+      Alert.alert('Bilet Alındı');
+      navigation.goBack();
+    } else {
+      Alert.alert('Hata');
+      navigation.goBack();
+    }
+  };
   return (
     <SafeAreaView>
       <ScrollView style={styles.container}>
@@ -28,6 +42,7 @@ const EventDetailCard = ({item}: EventCardProps) => {
             onLoadStart={() => setLoading(true)}
             onLoadEnd={() => setLoading(false)}
           />
+          <ActivityIndicator animating={loading} style={styles.loading} />
           <View style={styles.wrappers}>
             <Text style={styles.titles}>Etkinlik Adı: </Text>
             <Text style={styles.variables}>{item.name}</Text>
@@ -59,7 +74,7 @@ const EventDetailCard = ({item}: EventCardProps) => {
             </Text>
           );
         })}
-        <Pressable style={styles.buyWrapper}>
+        <Pressable style={styles.buyWrapper} onPress={handlePress}>
           <Text style={styles.buyText}>{item.price}₺ Satın Al</Text>
         </Pressable>
       </ScrollView>
