@@ -4,6 +4,7 @@ import {
   FlatList,
   SafeAreaView,
   ActivityIndicator,
+  ScrollView,
 } from 'react-native';
 import React, {useEffect} from 'react';
 import EventCard from '../../components/EventCard';
@@ -26,24 +27,28 @@ const EventsScreen = () => {
 
   return (
     <SafeAreaView>
+      {error && (
+        <View style={styles.view}>
+          <Text> Hata : {error}</Text>
+        </View>
+      )}
       {isLoading ? (
         <View style={styles.view}>
           <ActivityIndicator />
         </View>
       ) : (
         <View style={styles.flatList}>
-          <SearchBar />
-          <CategoriesSection />
           <FlatList
+            ListHeaderComponent={() => (
+              <>
+                <SearchBar />
+                <CategoriesSection />
+              </>
+            )}
             data={lastEvents}
             keyExtractor={item => item.id}
             renderItem={({item}) => <EventCard item={item} />}
           />
-        </View>
-      )}
-      {error && (
-        <View style={styles.view}>
-          <Text> Hata : {error}</Text>
         </View>
       )}
     </SafeAreaView>

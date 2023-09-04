@@ -4,5 +4,6 @@ export default StyleSheet.create({
     flexDirection: 'row',
     gap: 10,
     justifyContent: 'center',
+    marginBottom: 5,
   },
 });

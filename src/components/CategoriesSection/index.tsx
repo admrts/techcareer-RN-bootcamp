@@ -15,7 +15,6 @@ const CategoriesSection = () => {
       await store.dispatch(fetchCategories());
     };
     fetchData();
-    console.log(categories);
   }, []);
   return (
     <View style={styles.wrapper}>

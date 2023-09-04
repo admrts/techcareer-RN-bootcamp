@@ -42,6 +42,16 @@ export const eventsSlice = createSlice({
         );
       });
     },
+    filterCategory: (state, action: PayloadAction<string>) => {
+      const result = state.initialEvents.filter(item =>
+        item.category.includes(action.payload),
+      );
+      if (result.length > 0) {
+        state.lastEvents = result;
+      } else {
+        state.lastEvents = state.initialEvents;
+      }
+    },
   },
   extraReducers(builder) {
     builder.addCase(getEvents.pending, state => {
@@ -60,6 +70,6 @@ export const eventsSlice = createSlice({
   },
 });
 
-export const {searchValue} = eventsSlice.actions;
+export const {searchValue, filterCategory} = eventsSlice.actions;
 
 export default eventsSlice.reducer;
