@@ -1,10 +1,10 @@
-import {NavigationContainer} from '@react-navigation/native';
 import EventsScreen from '../../screens/EventsScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import EventDetailScreen from '../../screens/EventDetailScreen';
+import TicketsScreen from '../../screens/TicketsScreen';
 
 export type EventsStackParams = {
-  Events: undefined;
+  Tickets: undefined;
   Detail: {
     id: string;
   };
@@ -12,13 +12,13 @@ export type EventsStackParams = {
 
 const Stack = createNativeStackNavigator<EventsStackParams>();
 
-export const EventsStack = () => {
+export const TicketStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Events"
-        component={EventsScreen}
-        options={{title: 'Etkinlikler'}}
+        name="Tickets"
+        component={TicketsScreen}
+        options={{title: 'Biletler'}}
       />
       <Stack.Screen
         name="Detail"

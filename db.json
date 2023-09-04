@@ -422,6 +422,19 @@
     }
   ],
   "categories": ["Konser", "Tiyatro", "Workshop", "Spor"],
-  "favorites": [],
+  "favorites": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    }
+  ],
   "tickets": []
 }
