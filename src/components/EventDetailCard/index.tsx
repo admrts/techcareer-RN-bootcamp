@@ -17,7 +17,7 @@ import {useAppSelector} from '../../redux/hook';
 import {store} from '../../redux/store';
 import {getTickets} from '../../redux/ticketsSlice';
 import {deleteTicket} from '../../api/deleteTicket';
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 interface EventCardProps {
   item: EventsDataProps;
