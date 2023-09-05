@@ -5,8 +5,9 @@ import {
   SafeAreaView,
   ActivityIndicator,
   ScrollView,
+  VirtualizedList,
 } from 'react-native';
-import React, {useEffect} from 'react';
+import React, {useEffect, memo} from 'react';
 import EventCard from '../../components/EventCard';
 import {store} from '../../redux/store';
 import {getEvents} from '../../redux/eventsSlice';
@@ -14,6 +15,8 @@ import {useAppSelector} from '../../redux/hook';
 import styles from './index.style';
 import SearchBar from '../../components/SearchBar';
 import CategoriesSection from '../../components/CategoriesSection';
+import {EventsDataProps} from '../../api/events';
+import {FlashList} from '@shopify/flash-list';
 
 const EventsScreen = () => {
   const {error, lastEvents, isLoading} = useAppSelector(state => state.events);
@@ -37,14 +40,15 @@ const EventsScreen = () => {
           <ActivityIndicator />
         </View>
       ) : (
-        <View style={styles.flatList}>
-          <FlatList
+        <View style={styles.list}>
+          <FlashList
             ListHeaderComponent={() => (
               <>
                 <SearchBar />
                 <CategoriesSection />
               </>
             )}
+            estimatedItemSize={lastEvents.length}
             data={lastEvents}
             keyExtractor={item => item.id}
             renderItem={({item}) => <EventCard item={item} />}
@@ -55,4 +59,4 @@ const EventsScreen = () => {
   );
 };
 
-export default EventsScreen;
+export default memo(EventsScreen);

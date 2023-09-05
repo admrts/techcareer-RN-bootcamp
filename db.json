@@ -3,30 +3,6 @@
     {
       "id": 1,
       "category": "Konser",
-      "name": "Manga",
-      "city": "Bursa",
-      "location": "Bursa Kültür Park Açık Hava Tiyatrosu",
-      "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/wide/2DS89pnhalt.png",
-      "date": "10 Eylül 2023",
-      "time": "21:00",
-      "rules": [
-        "Etkinlik başladıktan sonra gelen seyircilerimizin satın almış oldukları koltuğa oturamama durumundan Biletix ve Organizatör sorumlu değildir. Organizatör firma ve Biletix geç kalan misafirler için koltuk garantisi vermez. Bu sebeple etkinliğe konser saatinden önce gelmenizi önemle rica ederiz.",
-        "6 yaş altı giremez, 6 yaş üstü bilete tabidir.",
-        "Konser alanına dışarıdan yiyecek ve içecek alınmayacaktır.",
-        "Organizasyon şirketinin programda ve bilet fiyatlarında değişiklik yapma hakkı saklıdır.",
-        "Etkinlik mekanına kamera, fotoğraf makinası, ses cihazı vb. alınmayacaktır.",
-        "Satın alınan biletlerde iptal, iade ve değişiklik yapılmamaktadır. Aynı zamanda, bileti okutularak etkinlik alanına giriş yapan misafirler daha sonra etkinlik alanını terketmesi durumunda tekrar etkinlik alanına girişi yapamayacaktır.",
-        "Organizasyon firması, diğer misafirleri rahatsız eden/edecek nitelikte, uygun görmediği kişileri etkinlik için bilet bedelini iade etmek koşuluyla, etkinlik mekanına kişiyi almama hakkına sahiptir.",
-        "Etkinlik süresince kayıt yapılmasına izin verilmeyecektir. Seyirci, sanatçı yönetimi uygun gördüğü takdirde görsel-işitsel kayıt cihazlarına el konabileceğini kabul eder.",
-        "Etkinlik alanına yanıcı, patlayıcı (deodorant, sprey, parfüm, kolonya vb. gibi), parlayıcı, kesici ve delici olarak kullanılabilecek her türlü alet, termos, motor kaskı ve lazer imleci ile girilmemektedir.",
-        "Etkinlik mekanına evcil hayvan alınmamaktadır.",
-        "Kampanyalı biletler sınır sayıdadır."
-      ],
-      "price": "500"
-    },
-    {
-      "id": 2,
-      "category": "Konser",
       "name": "Lvbel C5",
       "city": "Bursa",
       "location": "Club Inferno Bursa",
@@ -47,7 +23,7 @@
       "price": "600"
     },
     {
-      "id": 3,
+      "id": 2,
       "category": "Konser",
       "name": "Erol Evgin",
       "city": "İstanbul",
@@ -66,7 +42,7 @@
       "price": "650"
     },
     {
-      "id": 4,
+      "id": 3,
       "category": "Konser",
       "name": "Yıldız Tilbe",
       "city": "İzmir",
@@ -98,7 +74,7 @@
       "price": "900"
     },
     {
-      "id": 5,
+      "id": 4,
       "category": "Konser",
       "name": "Nil Karaibrahimgil",
       "city": "İstabul",
@@ -133,23 +109,7 @@
       "price": "750"
     },
     {
-      "id": 6,
-      "category": "Tiyatro",
-      "name": "Bir Baba Hamlet",
-      "city": "İstabul",
-      "location": "Kadıköy Belediyesi Selamiçeşme Özgürlük Parkı Amfi Tiyatro",
-      "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/birbabahamlett0JY03.png",
-      "date": "10 Eylül 2023",
-      "time": "21:00",
-      "rules": [
-        "12 yaşından küçük çocuklar etkinliğe alınmamaktadır.",
-        "12 yaş ve üzeri bilete tabidir.",
-        "Oyun başladıktan sonra salona seyirci alınmayacaktır."
-      ],
-      "price": "1200"
-    },
-    {
-      "id": 7,
+      "id": 5,
       "category": "Tiyatro",
       "name": "Dali Türkiye'de",
       "city": "İstabul",
@@ -164,7 +124,7 @@
       "price": "900"
     },
     {
-      "id": 8,
+      "id": 6,
       "category": "Tiyatro",
       "name": "Richard",
       "city": "Antalya",
@@ -183,7 +143,7 @@
       "price": "1100"
     },
     {
-      "id": 9,
+      "id": 7,
       "category": "Tiyatro",
       "name": "Piraye",
       "city": "Bursa",
@@ -199,7 +159,7 @@
       "price": "1300"
     },
     {
-      "id": 10,
+      "id": 8,
       "category": "Tiyatro",
       "name": "Frida",
       "city": "Bursa",
@@ -215,30 +175,7 @@
       "price": "980"
     },
     {
-      "id": 11,
-      "category": "Workshop",
-      "name": "Resim Workshop - İnci Küpeli Kız",
-      "city": "İstanbul",
-      "location": "Ankaworkshop",
-      "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/incikupeli2MD67.jpg",
-      "date": "10 Eylül 2023",
-      "time": "12:00",
-      "rules": [
-        "Katılımcılar ücretsiz kafe alanından yararlanabilir.",
-        "Etlinliklerde içecek ikramlarımız bulunmaktadır dilerseniz kendinizde getirebilirsiniz.",
-        "Etkinliklerde 15 yaş sınırı vardır.",
-        "Etkinliklerimiz herkesin birlikte devam edebilmesi için etkinlik başladıktan 15 dakika sonra gelenler etkinliğe katılamazlar.",
-        "Satın alınan biletler programda değişiklik olmadığı sürece iade edilemez.",
-        "Etkinlikler ortalama 2-3 saat sürmektedirektedir.",
-        "Etkinlikte kullanılacak tüm malzemeler bilet fiyatına dahildir.",
-        "Etkinliğe gecikme süresi 15 dakikadır,15 dakikadan sonra katılamazlar.",
-        "Etkinliğe evcil hayvan getirilemez.",
-        "Etkinliğe organizatörün bilgisi dışında küçük çocuklarınızla katılamazsınız."
-      ],
-      "price": "250"
-    },
-    {
-      "id": 12,
+      "id": 9,
       "category": "Workshop",
       "name": "Masterpiece Galata Heykel - Sakura",
       "city": "İstanbul",
@@ -257,7 +194,7 @@
       "price": "350"
     },
     {
-      "id": 13,
+      "id": 10,
       "category": "Workshop",
       "name": "İtalyan Gibi Pişir",
       "city": "İstanbul",
@@ -276,7 +213,7 @@
       "price": "400"
     },
     {
-      "id": 14,
+      "id": 11,
       "category": "Workshop",
       "name": "Resim Workshop - Picasso",
       "city": "İstanbul",
@@ -299,7 +236,7 @@
       "price": "450"
     },
     {
-      "id": 15,
+      "id": 12,
       "category": "Workshop",
       "name": "Bir Bar Taburesi Üstünde",
       "city": "İstanbul",
@@ -318,31 +255,7 @@
       "price": "500"
     },
     {
-      "id": 16,
-      "category": "Spor",
-      "name": "Galatasaray - Pınar Karşıyaka",
-      "city": "Antalya",
-      "location": "Cosmos Sports Center",
-      "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/wide/widecosmos2NBW1.png",
-      "date": "16 Eylül 2023",
-      "time": "15:00",
-      "rules": [
-        "Yaş sınırlaması yoktur.",
-        "8 yaş ve üzeri tüm katılımcılar bilete tabidir. 8 yaş ve altı seyirciler, müsabakayı koltuk verilmeksizin yani ebeveyninin kucağında oturmak şartıyla ücretsiz şekilde takip edebilmektedir.",
-        "Biletler günlüktür. Salona giriş yapıldıktan sonra tekrar çıkış-giriş yapılamayacaktır. Zorunlu durumlarda bilet ve güvenlik görevlisi kontrolünde yardım alınabilinir.",
-        "Bilet fiyatlarına maç esnasında kahve-çay ve su ikramı dahildir.",
-        "Bilet fiyatlarına Nirvana Basketball 360 Summit (11- 13 Eylül 2023) katılımı dahildir.",
-        "Organizasyonu yapan kuruluşun, müsabaka programı (tarih-saat-mekan) ve bilet fiyatlarında değişiklik yapma hakkı saklıdır.",
-        "Organizasyon firması etkinlik için uygun görmediği kişileri bilet bedelini iade ederek etkinlik mekanına almama hakkına sahiptir.",
-        "Salona dışarıdan yiyecek ve içecek alınmayacaktır.",
-        "Satın alınan biletlerde iptal, iade ve değişiklik yapılmamaktadır.",
-        "Çocuk indirimi, belirtilen yaş aralığındaki çocukların ebeveynleri ile birlikte etkinlik mekanına girişte geçerli ve resmi kimlik ibraz etmesi halinde geçerlidir. Resmi ve geçerli kimlik ibraz edilememesi halinde fiyat farkı organizasyon firması tarafından etkinlik mekanı girişinde nakit olarak tahsil edilecektir.",
-        "Etkinlik, tüm koltuklar için numaralı oturma düzeni ile gerçekleşecektir."
-      ],
-      "price": "600"
-    },
-    {
-      "id": 17,
+      "id": 13,
       "category": "Spor",
       "name": "Okula Dönüş Yogası",
       "city": "İstanbul",
@@ -359,7 +272,7 @@
       "price": "800"
     },
     {
-      "id": 18,
+      "id": 14,
       "category": "Spor",
       "name": "CSKA Moskova - Türk Telekom",
       "city": "Antalya",
@@ -383,7 +296,7 @@
       "price": "600"
     },
     {
-      "id": 19,
+      "id": 15,
       "category": "Spor",
       "name": "Fethiye-Ölüdeniz Yamaç Paraşütü",
       "city": "Muğla",
@@ -404,7 +317,7 @@
       "price": "900"
     },
     {
-      "id": 20,
+      "id": 16,
       "category": "Spor",
       "name": "Boğaz'da Yoga",
       "city": "İstanbul",
@@ -421,6 +334,28 @@
       "price": "750"
     }
   ],
-  "categories": ["Tümü", "Konser", "Tiyatro", "Workshop", "Spor"],
-  "tickets": []
+  "categories": [
+    "Tümü",
+    "Konser",
+    "Tiyatro",
+    "Workshop",
+    "Spor"
+  ],
+  "tickets": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
 }

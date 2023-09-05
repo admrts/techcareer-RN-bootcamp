@@ -1,5 +1,5 @@
 import {View, Text, FlatList, ActivityIndicator} from 'react-native';
-import React, {useEffect} from 'react';
+import React, {useEffect, memo} from 'react';
 import CategoryButton from '../CategoryButton';
 import styles from './index.style';
 import {store} from '../../redux/store';
@@ -27,4 +27,4 @@ const CategoriesSection = () => {
   );
 };
 
-export default CategoriesSection;
+export default memo(CategoriesSection);

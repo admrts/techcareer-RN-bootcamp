@@ -1,7 +1,10 @@
 import {axios} from '../lib/axios';
 
-export async function getAllTickets(): Promise<string[]> {
+export interface TickectsIdsProps {
+  id: number;
+}
+
+export async function getAllTickets(): Promise<TickectsIdsProps[]> {
   const {data} = await axios.get('/tickets');
-  console.log(data);
   return data;
 }
