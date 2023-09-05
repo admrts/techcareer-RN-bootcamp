@@ -6,17 +6,18 @@ import {
   Pressable,
   ActivityIndicator,
   Alert,
+  Share,
 } from 'react-native';
 import styles from './EventDetailCard.style';
 import {EventsDataProps} from '../../api/events';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import {buyTicket} from '../../api/buyTicket';
-import {useNavigation} from '@react-navigation/native';
 import {FlashList} from '@shopify/flash-list';
 import {useAppSelector} from '../../redux/hook';
 import {store} from '../../redux/store';
 import {getTickets} from '../../redux/ticketsSlice';
 import {deleteTicket} from '../../api/deleteTicket';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 interface EventCardProps {
   item: EventsDataProps;
@@ -24,7 +25,6 @@ interface EventCardProps {
 
 const EventDetailCard = ({item}: EventCardProps) => {
   const {ticketsIds} = useAppSelector(store => store.tickets);
-  const navigation = useNavigation();
   const handleBuy = async () => {
     const status = await buyTicket(item.id);
     if (status == 201) {
@@ -78,6 +78,25 @@ interface EventCardProps {
   item: EventsDataProps;
 }
 const ListHeader = ({item}: EventCardProps) => {
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        //shared
+        message: item.imageUrl,
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // activiy type
+        } else {
+          //shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        console.log('Paylaşım iptal');
+      }
+    } catch (error: any) {
+      Alert.alert(error.message);
+    }
+  };
   const [loading, setLoading] = useState(false);
   return (
     <>
@@ -108,6 +127,12 @@ const ListHeader = ({item}: EventCardProps) => {
         <View style={styles.wrappers}>
           <Text style={styles.titles}>Konum: </Text>
           <Text style={styles.variables}>{item.location}</Text>
+        </View>
+        <View style={styles.shareWrapper}>
+          <Pressable style={styles.share} onPress={onShare}>
+            <Text style={styles.shareText}>Etkinliği Paylaş</Text>
+            <Icon name="share-alt" size={16} color="#fff" />
+          </Pressable>
         </View>
       </View>
 

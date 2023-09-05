@@ -58,4 +58,22 @@ export default StyleSheet.create({
     top: 0,
     alignItems: 'center',
   },
+  shareWrapper: {
+    alignItems: 'flex-end',
+    paddingHorizontal: 10,
+  },
+  share: {
+    backgroundColor: 'rgb(10,132,255)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 8,
+    flexDirection: 'row',
+    gap: 5,
+  },
+  shareText: {
+    color: '#fff',
+    fontWeight: '700',
+  },
 });
