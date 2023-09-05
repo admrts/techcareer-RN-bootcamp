@@ -9,7 +9,6 @@ export const getTickets = createAsyncThunk('getTickets', async () => {
 // Define a type for the slice state
 interface TicketStateProps {
   ticketsIds: Array<TickectsIdsProps>;
-  allTickets: Array<EventsDataProps>;
   isLoading: boolean | undefined;
   error: string | undefined;
 }
@@ -17,7 +16,6 @@ interface TicketStateProps {
 // Define the initial state using that type
 const initialState: TicketStateProps = {
   ticketsIds: [],
-  allTickets: [],
   isLoading: false,
   error: undefined,
 };
@@ -25,17 +23,12 @@ const initialState: TicketStateProps = {
 export const ticketsSlice = createSlice({
   name: 'tickets',
   initialState,
-  reducers: {
-    signAllTickets: (state, action: PayloadAction<EventsDataProps[]>) => {
-      state.allTickets = action.payload;
-    },
-  },
+  reducers: {},
   extraReducers(builder) {
     builder.addCase(getTickets.pending, state => {
       state.isLoading = true;
     });
     builder.addCase(getTickets.fulfilled, (state, action) => {
-      console.log('sa', action.payload);
       state.ticketsIds = action.payload;
       state.isLoading = false;
       state.error = undefined;
@@ -47,6 +40,6 @@ export const ticketsSlice = createSlice({
   },
 });
 
-export const {signAllTickets} = ticketsSlice.actions;
+export const {} = ticketsSlice.actions;
 
 export default ticketsSlice.reducer;

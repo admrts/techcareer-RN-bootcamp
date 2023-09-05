@@ -1,10 +1,8 @@
-import {View, Text, ActivityIndicator} from 'react-native';
-import React, {useCallback, memo, useState, useEffect} from 'react';
+import {View, Text} from 'react-native';
+import React, {memo, useState, useEffect} from 'react';
 import {useAppSelector} from '../../redux/hook';
-import {useFocusEffect} from '@react-navigation/native';
 import TicketCard from '../../components/TicketCard';
 import {FlashList} from '@shopify/flash-list';
-import {getAllTickets, TickectsIdsProps} from '../../api/getTicket';
 import {EventsDataProps} from '../../api/events';
 import {useIsFocused} from '@react-navigation/native';
 import {store} from '../../redux/store';

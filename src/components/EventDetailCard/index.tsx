@@ -2,57 +2,77 @@ import {
   View,
   Text,
   Image,
-  ScrollView,
   SafeAreaView,
-  FlatList,
   Pressable,
   ActivityIndicator,
   Alert,
-  VirtualizedList,
 } from 'react-native';
 import styles from './EventDetailCard.style';
 import {EventsDataProps} from '../../api/events';
-import {useState, memo} from 'react';
+import {useEffect, useState} from 'react';
 import {buyTicket} from '../../api/buyTicket';
 import {useNavigation} from '@react-navigation/native';
+import {FlashList} from '@shopify/flash-list';
+import {useAppSelector} from '../../redux/hook';
+import {store} from '../../redux/store';
+import {getTickets} from '../../redux/ticketsSlice';
+import {deleteTicket} from '../../api/deleteTicket';
 
 interface EventCardProps {
   item: EventsDataProps;
 }
 
 const EventDetailCard = ({item}: EventCardProps) => {
+  const {ticketsIds} = useAppSelector(store => store.tickets);
   const navigation = useNavigation();
-  const handlePress = async () => {
+  const handleBuy = async () => {
     const status = await buyTicket(item.id);
     if (status == 201) {
       Alert.alert('Bilet Alındı');
-      navigation.goBack();
+      await store.dispatch(getTickets());
     }
   };
 
-  const getItem = (data: Array<string>, index: number) => data[index];
-  const getItemCount = (data: Array<string>) => data.length;
+  const handleCancel = async () => {
+    const data = await deleteTicket(item.id);
+    if (data.status == 200) {
+      Alert.alert('İptal Edildi');
+      await store.dispatch(getTickets());
+    }
+  };
+  const haveTicket = ticketsIds.filter(
+    ticket => ticket.id.toString() == item.id,
+  );
 
   return (
     <SafeAreaView style={styles.container}>
-      <VirtualizedList
+      <FlashList
         keyExtractor={item => item}
-        getItem={getItem}
-        getItemCount={getItemCount}
         data={item.rules}
+        estimatedItemSize={item.rules.length}
         renderItem={({item}) => <Text style={styles.rules}>* {item}</Text>}
         ListHeaderComponent={<ListHeader item={item} />}
         ListFooterComponent={
-          <Pressable style={styles.buyWrapper} onPress={handlePress}>
-            <Text style={styles.buyText}>{item.price}₺ Satın Al</Text>
-          </Pressable>
+          <>
+            {haveTicket.length > 0 ? (
+              <Pressable
+                style={[styles.buyWrapper, {backgroundColor: 'red'}]}
+                onPress={handleCancel}>
+                <Text style={styles.buyText}>{item.price}₺ İptal Et</Text>
+              </Pressable>
+            ) : (
+              <Pressable style={styles.buyWrapper} onPress={handleBuy}>
+                <Text style={styles.buyText}>{item.price}₺ Satın Al</Text>
+              </Pressable>
+            )}
+          </>
         }
       />
     </SafeAreaView>
   );
 };
 
-export default memo(EventDetailCard);
+export default EventDetailCard;
 
 interface EventCardProps {
   item: EventsDataProps;

@@ -5,6 +5,8 @@ const {height: screenHeight, width: screenWidth} = Dimensions.get('window');
 export default StyleSheet.create({
   container: {
     marginHorizontal: 5,
+    height: '100%',
+    width: '100%',
   },
   head: {
     gap: 5,
