@@ -3,14 +3,14 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import EventDetailScreen from '../../screens/EventDetailScreen';
 import TicketsScreen from '../../screens/TicketsScreen';
 
-export type EventsStackParams = {
+export type TicketStackParams = {
   Tickets: undefined;
   Detail: {
     id: string;
   };
 };
 
-const Stack = createNativeStackNavigator<EventsStackParams>();
+const Stack = createNativeStackNavigator<TicketStackParams>();
 
 export const TicketStack = () => {
   return (
