@@ -24,6 +24,12 @@ cd techcareer-RN-bootcamp
 npm install
 ```
 
+- Install pod
+
+```sh
+cd ios && pod install
+```
+
 - Start Json-Server
 
 ```sh
