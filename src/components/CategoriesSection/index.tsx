@@ -1,4 +1,10 @@
-import {View, Text, FlatList, ActivityIndicator} from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  ActivityIndicator,
+  ScrollView,
+} from 'react-native';
 import React, {useEffect, memo} from 'react';
 import CategoryButton from '../CategoryButton';
 import styles from './index.style';
@@ -17,13 +23,16 @@ const CategoriesSection = () => {
     fetchData();
   }, []);
   return (
-    <View style={styles.wrapper}>
+    <ScrollView
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      style={styles.wrapper}>
       {isLoading && <ActivityIndicator />}
       {error && <Text>{error}</Text>}
       {categories.map((item, idx) => (
         <CategoryButton key={idx} name={item} />
       ))}
-    </View>
+    </ScrollView>
   );
 };
 

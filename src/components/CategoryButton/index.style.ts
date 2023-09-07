@@ -8,6 +8,8 @@ export default StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 5,
     borderRadius: 5,
+    marginHorizontal: 5,
+    width: 100,
   },
   text: {
     fontSize: 16,

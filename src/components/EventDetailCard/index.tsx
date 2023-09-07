@@ -18,6 +18,9 @@ import {store} from '../../redux/store';
 import {getTickets} from '../../redux/ticketsSlice';
 import {deleteTicket} from '../../api/deleteTicket';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {useNavigation} from '@react-navigation/native';
+import {EventsStackParams} from '../../routes/EventsStack/EventsStack';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 interface EventCardProps {
   item: EventsDataProps;
@@ -78,6 +81,9 @@ interface EventCardProps {
   item: EventsDataProps;
 }
 const ListHeader = ({item}: EventCardProps) => {
+  const [loading, setLoading] = useState(false);
+  const navigation =
+    useNavigation<NativeStackNavigationProp<EventsStackParams>>();
   const onShare = async () => {
     try {
       const result = await Share.share({
@@ -97,7 +103,9 @@ const ListHeader = ({item}: EventCardProps) => {
       Alert.alert(error.message);
     }
   };
-  const [loading, setLoading] = useState(false);
+  const goMap = () => {
+    navigation.navigate('Map', {location: item.location});
+  };
   return (
     <>
       <View style={styles.head}>
@@ -126,9 +134,13 @@ const ListHeader = ({item}: EventCardProps) => {
         </View>
         <View style={styles.wrappers}>
           <Text style={styles.titles}>Konum: </Text>
-          <Text style={styles.variables}>{item.location}</Text>
+          <Text style={styles.variables}>{item.location.name}</Text>
         </View>
         <View style={styles.shareWrapper}>
+          <Pressable style={styles.location} onPress={goMap}>
+            <Text style={styles.shareText}>Konumu Göster</Text>
+            <Icon name="map" size={16} color="#fff" />
+          </Pressable>
           <Pressable style={styles.share} onPress={onShare}>
             <Text style={styles.shareText}>Etkinliği Paylaş</Text>
             <Icon name="share-alt" size={16} color="#fff" />

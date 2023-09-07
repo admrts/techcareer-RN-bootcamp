@@ -8,7 +8,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   list: {
-    marginHorizontal: 5,
+    paddingHorizontal: 5,
     width: '100%',
     height: '100%',
   },

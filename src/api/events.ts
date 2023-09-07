@@ -5,7 +5,11 @@ export interface EventsDataProps {
   category: string;
   name: string;
   city: string;
-  location: string;
+  location: {
+    name: string;
+    latitude: number;
+    longitude: number;
+  };
   imageUrl: string;
   date: string;
   time: string;

@@ -4,7 +4,7 @@ const {height: screenHeight, width: screenWidth} = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
-    marginHorizontal: 5,
+    paddingHorizontal: 5,
     height: '100%',
     width: '100%',
   },
@@ -59,11 +59,22 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   shareWrapper: {
-    alignItems: 'flex-end',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     paddingHorizontal: 10,
   },
   share: {
     backgroundColor: 'rgb(10,132,255)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 8,
+    flexDirection: 'row',
+    gap: 5,
+  },
+  location: {
+    backgroundColor: 'rgb(50,215,75)',
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 20,
