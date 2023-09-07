@@ -5,7 +5,11 @@
       "category": "Konser",
       "name": "Lvbel C5",
       "city": "Bursa",
-      "location": "Club Inferno Bursa",
+      "location": {
+        "name": "Club Inferno Bursa",
+        "latitude": 40.2113,
+        "longitude": 28.99929
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/lvbl2OS07.png",
       "date": "10 Eylül 2023",
       "time": "21:00",
@@ -27,7 +31,11 @@
       "category": "Konser",
       "name": "Erol Evgin",
       "city": "İstanbul",
-      "location": "Maximum Uniq Açıkhava",
+      "location": {
+        "name": "Maximum Uniq Açıkhava",
+        "latitude": 41.10797,
+        "longitude": 29.00822
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/wide/25AU9_eevgin_wide.jpg",
       "date": "13 Eylül 2023",
       "time": "21:00",
@@ -46,7 +54,11 @@
       "category": "Konser",
       "name": "Yıldız Tilbe",
       "city": "İzmir",
-      "location": "İzmir Kültürpark Açıkhava Tiyatrosu",
+      "location": {
+        "name": "İzmir Kültürpark Açıkhava Tiyatrosu",
+        "latitude": 38.42893,
+        "longitude": 27.14711
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/yildizz-jj.png",
       "date": "13 Eylül 2023",
       "time": "21:00",
@@ -78,7 +90,11 @@
       "category": "Konser",
       "name": "Nil Karaibrahimgil",
       "city": "İstabul",
-      "location": "Kuruçeşme Açıkhava",
+      "location": {
+        "name": "Kuruçeşme Açıkhava",
+        "latitude": 41.04602,
+        "longitude": 28.99053
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/wide/NILK_BUYUK.jpg",
       "date": "14 Eylül 2023",
       "time": "21:00",
@@ -113,7 +129,11 @@
       "category": "Tiyatro",
       "name": "Dali Türkiye'de",
       "city": "İstabul",
-      "location": "Özel Maltepe Tarhan Koleji",
+      "location": {
+        "name": "Özel Maltepe Tarhan Koleji",
+        "latitude": 40.91785,
+        "longitude": 29.15928
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/dali457x252.jpg",
       "date": "13 Eylül 2023",
       "time": "20:30",
@@ -128,7 +148,11 @@
       "category": "Tiyatro",
       "name": "Richard",
       "city": "Antalya",
-      "location": "Antalya Açıkhava",
+      "location": {
+        "name": "Antalya Açıkhava",
+        "latitude": 36.88162,
+        "longitude": 30.66693
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/wide/richard-wideeee1.jpg",
       "date": "14 Eylül 2023",
       "time": "21:00",
@@ -147,7 +171,11 @@
       "category": "Tiyatro",
       "name": "Piraye",
       "city": "Bursa",
-      "location": "Nilüfer Belediyesi Uğur Mumcu Sahnesi",
+      "location": {
+        "name": "Nilüfer Belediyesi Uğur Mumcu Sahnesi",
+        "latitude": 40.2198,
+        "longitude": 28.95887
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/VZV04_1.gif",
       "date": "16 Eylül 2023",
       "time": "17:00",
@@ -163,7 +191,11 @@
       "category": "Tiyatro",
       "name": "Frida",
       "city": "Bursa",
-      "location": "Nilüfer Belediyesi Uğur Mumcu Sahnesi",
+      "location": {
+        "name": "Nilüfer Belediyesi Uğur Mumcu Sahnesi",
+        "latitude": 40.2198,
+        "longitude": 28.95887
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/fridahacar.jpg",
       "date": "16 Eylül 2023",
       "time": "20:30",
@@ -179,7 +211,11 @@
       "category": "Workshop",
       "name": "Masterpiece Galata Heykel - Sakura",
       "city": "İstanbul",
-      "location": "Masterpiece Galata Heykel",
+      "location": {
+        "name": "Masterpiece Galata Heykel",
+        "latitude": 41.02657,
+        "longitude": 28.97626
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/heykel_sakura.png",
       "date": "10 Eylül 2023",
       "time": "13:00",
@@ -198,7 +234,11 @@
       "category": "Workshop",
       "name": "İtalyan Gibi Pişir",
       "city": "İstanbul",
-      "location": "Eataly Mutfak Atölyesi",
+      "location": {
+        "name": "Eataly Mutfak Atölyesi",
+        "latitude": 41.0666,
+        "longitude": 29.017
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/italyangibipisir2KC55.jpg",
       "date": "10 Eylül 2023",
       "time": "19:00",
@@ -217,7 +257,11 @@
       "category": "Workshop",
       "name": "Resim Workshop - Picasso",
       "city": "İstanbul",
-      "location": "Ankaworkshop",
+      "location": {
+        "name": "Ankaworkshop",
+        "latitude": 40.98948,
+        "longitude": 29.02808
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/picasso2MD68.png",
       "date": "11 Eylül 2023",
       "time": "19:30",
@@ -240,7 +284,11 @@
       "category": "Workshop",
       "name": "Bir Bar Taburesi Üstünde",
       "city": "İstanbul",
-      "location": "Masterpiece Beylikdüzü",
+      "location": {
+        "name": "Masterpiece Beylikdüzü",
+        "latitude": 41.00576,
+        "longitude": 28.6473
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/resim_bir_bar_taburesi_ustunde.png",
       "date": "12 Eylül 2023",
       "time": "19:00",
@@ -259,7 +307,11 @@
       "category": "Spor",
       "name": "Okula Dönüş Yogası",
       "city": "İstanbul",
-      "location": "Sait Halim Paşa Yalısı",
+      "location": {
+        "name": "Sait Halim Paşa Yalısı",
+        "latitude": 41.12063,
+        "longitude": 29.06989
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/yalidayoga2020.png",
       "date": "16 Eylül 2023",
       "time": "10:00",
@@ -276,7 +328,11 @@
       "category": "Spor",
       "name": "CSKA Moskova - Türk Telekom",
       "city": "Antalya",
-      "location": "Cosmos Sports Center",
+      "location": {
+        "name": "Cosmos Sports Center",
+        "latitude": 36.85831,
+        "longitude": 30.85911
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/wide/widecosmos2NBW1.png",
       "date": "13 Eylül 2023",
       "time": "19:00",
@@ -300,7 +356,11 @@
       "category": "Spor",
       "name": "Fethiye-Ölüdeniz Yamaç Paraşütü",
       "city": "Muğla",
-      "location": "Hanuman Ölüdeniz",
+      "location": {
+        "name": "Hanuman Ölüdeniz",
+        "latitude": 36.54654,
+        "longitude": 29.12524
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/yamac1HAN1.png",
       "date": "30 Eylül 2023",
       "time": "18:30",
@@ -321,7 +381,11 @@
       "category": "Spor",
       "name": "Boğaz'da Yoga",
       "city": "İstanbul",
-      "location": "Sait Halim Paşa Yalısı",
+      "location": {
+        "name": "Sait Halim Paşa Yalısı",
+        "latitude": 41.12063,
+        "longitude": 29.06989
+      },
       "imageUrl": "https://www.biletix.com/static/images/live/event/eventimages/yalidayoga2020.png",
       "date": "20 Eylül 2023",
       "time": "10:00",
@@ -346,16 +410,10 @@
       "id": 7
     },
     {
-      "id": 8
-    },
-    {
       "id": 5
     },
     {
       "id": 6
-    },
-    {
-      "id": 9
     }
   ]
 }
