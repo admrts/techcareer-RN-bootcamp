@@ -46,8 +46,6 @@ npm start
 
 ```sh
 npm run ios
-// or
-npm run android
 ```
 
 ### ScreenShots
