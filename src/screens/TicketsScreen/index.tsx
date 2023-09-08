@@ -1,5 +1,5 @@
 import {View, Text} from 'react-native';
-import React, {memo, useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useAppSelector} from '../../redux/hook';
 import TicketCard from '../../components/TicketCard';
 import {FlashList} from '@shopify/flash-list';
@@ -49,4 +49,4 @@ const TicketsScreen = () => {
   );
 };
 
-export default memo(TicketsScreen);
+export default TicketsScreen;

@@ -7,7 +7,7 @@ import {
   ScrollView,
   VirtualizedList,
 } from 'react-native';
-import React, {useEffect, memo} from 'react';
+import React, {useEffect} from 'react';
 import EventCard from '../../components/EventCard';
 import {store} from '../../redux/store';
 import {getEvents} from '../../redux/eventsSlice';
@@ -42,12 +42,12 @@ const EventsScreen = () => {
       ) : (
         <View style={styles.list}>
           <FlashList
-            ListHeaderComponent={() => (
-              <>
+            ListHeaderComponent={
+              <View>
                 <SearchBar />
                 <CategoriesSection />
-              </>
-            )}
+              </View>
+            }
             estimatedItemSize={lastEvents.length}
             data={lastEvents}
             keyExtractor={item => item.id}
@@ -59,4 +59,4 @@ const EventsScreen = () => {
   );
 };
 
-export default memo(EventsScreen);
+export default EventsScreen;

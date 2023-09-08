@@ -1,5 +1,5 @@
 import {View, Text, Image, Pressable} from 'react-native';
-import React, {memo} from 'react';
+import React from 'react';
 import {EventsDataProps} from '../../api/events';
 import styles from './index.style';
 import {useNavigation} from '@react-navigation/native';
@@ -25,4 +25,4 @@ const TicketCard = ({item}: TicketProps) => {
   );
 };
 
-export default memo(TicketCard);
+export default TicketCard;

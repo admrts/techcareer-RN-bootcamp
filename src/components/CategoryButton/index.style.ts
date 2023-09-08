@@ -5,10 +5,10 @@ const {width: screenWidth} = Dimensions.get('window');
 export default StyleSheet.create({
   wrapper: {
     borderWidth: 1,
-    paddingHorizontal: 8,
+    paddingHorizontal: 5,
     paddingVertical: 5,
     borderRadius: 5,
-    marginHorizontal: 5,
+    marginRight: 5,
     width: 100,
   },
   text: {

@@ -5,7 +5,7 @@ import {
   ActivityIndicator,
   ScrollView,
 } from 'react-native';
-import React, {useEffect, memo} from 'react';
+import React, {useEffect} from 'react';
 import CategoryButton from '../CategoryButton';
 import styles from './index.style';
 import {store} from '../../redux/store';
@@ -16,6 +16,7 @@ const CategoriesSection = () => {
   const {categories, error, isLoading} = useAppSelector(
     store => store.categories,
   );
+
   useEffect(() => {
     const fetchData = async () => {
       await store.dispatch(fetchCategories());
@@ -36,4 +37,4 @@ const CategoriesSection = () => {
   );
 };
 
-export default memo(CategoriesSection);
+export default CategoriesSection;
