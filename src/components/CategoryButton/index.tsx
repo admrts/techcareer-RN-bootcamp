@@ -1,21 +1,24 @@
-import {View, Text, Pressable} from 'react-native';
+import {Text, Pressable} from 'react-native';
 import React from 'react';
 import styles from './index.style';
-import {useAppDispatch} from '../../redux/hook';
-import {filterCategory} from '../../redux/eventsSlice';
 
 interface CategoryButtonProps {
   name: string;
+  marked: boolean;
+  onPress: () => void;
 }
 
-const CategoryButton = ({name}: CategoryButtonProps) => {
-  const dispatch = useAppDispatch();
-  const handlePress = () => {
-    dispatch(filterCategory(name));
-  };
+const CategoryButton = ({name, onPress, marked}: CategoryButtonProps) => {
   return (
-    <Pressable style={styles.wrapper} onPress={handlePress}>
-      <Text style={styles.text}>{name}</Text>
+    <Pressable
+      style={[
+        styles.wrapper,
+        marked ? {backgroundColor: '#828282'} : {backgroundColor: 'white'},
+      ]}
+      onPress={onPress}>
+      <Text style={[styles.text, marked ? {color: 'white'} : {color: 'black'}]}>
+        {name}
+      </Text>
     </Pressable>
   );
 };
