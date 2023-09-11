@@ -5,14 +5,15 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderRadius: 20,
     borderColor: '#000',
-    padding: 10,
     marginVertical: 5,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   input: {
     width: '90%',
     height: '100%',
-    borderWidth: 1,
+
+    padding: 10,
   },
 });
